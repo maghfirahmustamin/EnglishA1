@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Belajar English A1 dari nol: grammar, vocabulary, listening, writing, speaking, dan AI conversation partner.">
+  <title>English A1 — Learn & Speak</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" aria-label="English A1 home">
+        <span class="brand-mark">A1</span>
+        <span><b>English Path</b><small>Learn · Practice · Grow</small></span>
+      </a>
+      <div class="side-label">YOUR LEARNING</div>
+      <nav class="nav-list">
+        <button class="nav-link active" data-page="overview"><span>⌂</span> Overview</button>
+        <button class="nav-link" data-page="lessons"><span>▤</span> Lessons <em>06</em></button>
+        <button class="nav-link" data-page="grammar"><span>文</span> Grammar Guide</button>
+        <button class="nav-link" data-page="vocabulary"><span>Aa</span> Vocabulary</button>
+        <button class="nav-link" data-page="speaking"><span>◖</span> Speaking Practice</button>
+        <button class="nav-link" data-page="ai"><span>✳</span> AI Conversation</button>
+        <button class="nav-link" data-page="quiz"><span>✓</span> Quick Quiz</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="level-card">
+          <span class="level-tag">YOUR LEVEL</span>
+          <strong>A1 Beginner</strong>
+          <p>Build your English foundation, one step at a time.</p>
+          <div class="level-line"><i></i></div>
+          <small id="side-progress">0% completed</small>
+        </div>
+        <p class="sidebar-foot">ENGLISH PATH <span>•</span> A1 COURSE</p>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">☰</button>
+        <div class="breadcrumb">COURSE <span>/</span> <b id="crumb">OVERVIEW</b></div>
+        <div class="top-actions"><span class="level-pill">A1 · BEGINNER</span><button class="avatar" title="Learner profile">F</button></div>
+      </header>
+
+      <section class="page active" id="page-overview">
+        <div class="welcome-row">
+          <div><p class="eyebrow">YOUR ENGLISH JOURNEY STARTS HERE</p><h1>Small steps.<br><span>Confident English.</span></h1>
+          <p class="intro">Pelajari dasar bahasa Inggris secara bertahap, lalu gunakan dalam percakapan nyata.</p>
+          <button class="primary-btn" data-go="lessons">Start learning <span>→</span></button></div>
+          <div class="hero-art"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="hero-note">HELLO!<b>Let's speak<br>English.</b><span>01 / A1 COURSE</span></div><div class="float-dot dot-one"></div><div class="float-dot dot-two"></div></div>
+        </div>
+        <div class="stats-grid">
+          <article class="stat-card"><span class="stat-icon lavender">▤</span><div><small>COURSE MODULES</small><strong>06</strong><p>Learning units</p></div></article>
+          <article class="stat-card"><span class="stat-icon peach">Aa</span><div><small>CORE SKILLS</small><strong>04</strong><p>Read · Write · Listen · Speak</p></div></article>
+          <article class="stat-card"><span class="stat-icon mint">◷</span><div><small>YOUR PROGRESS</small><strong id="overview-progress">0%</strong><p>Keep going!</p></div></article>
+        </div>
+        <div class="section-heading"><div><p class="eyebrow">YOUR ROADMAP</p><h2>Learning path</h2></div><button class="text-btn" data-go="lessons">View all lessons →</button></div>
+        <div class="roadmap" id="roadmap"></div>
+        <div class="bottom-grid">
+          <article class="panel daily-panel"><p class="eyebrow">DAILY PRACTICE</p><h3>Make English a habit.</h3><p>Latih sedikit setiap hari. Konsistensi lebih penting daripada belajar terlalu banyak sekaligus.</p><button class="outline-btn" data-go="speaking">Practice speaking →</button></article>
+          <article class="panel quote-panel"><span class="quote-mark">“</span><p>Learning a language is not about being perfect. It is about being brave enough to communicate.</p><small>YOUR DAILY REMINDER</small></article>
+        </div>
+      </section>
+
+      <section class="page" id="page-lessons">
+        <div class="page-heading"><p class="eyebrow">A1 · BEGINNER</p><h1>Course lessons</h1><p>Enam modul untuk membangun fondasi bahasa Inggris dari awal.</p></div>
+        <div class="lesson-list" id="lesson-list"></div>
+      </section>
+
+      <section class="page" id="page-lesson-detail">
+        <button class="back-btn" data-go="lessons">← All lessons</button>
+        <div id="lesson-detail"></div>
+      </section>
+
+      <section class="page" id="page-grammar">
+        <div class="page-heading"><p class="eyebrow">UNDERSTAND THE STRUCTURE</p><h1>Grammar guide</h1><p>Pelajari pola kalimat, fungsi, rumus, dan contoh penggunaannya.</p></div>
+        <div class="grammar-layout"><div class="grammar-tabs" id="grammar-tabs"></div><article class="panel grammar-content" id="grammar-content"></article></div>
+      </section>
+
+      <section class="page" id="page-vocabulary">
+        <div class="page-heading"><p class="eyebrow">WORDS YOU WILL USE</p><h1>Vocabulary bank</h1><p>Kumpulan kosakata A1 dengan arti dan contoh kalimat.</p></div>
+        <div class="vocab-tools"><input id="vocab-search" type="search" placeholder="Search a word or meaning..."><select id="vocab-category"><option value="all">All categories</option></select></div>
+        <div class="vocab-grid" id="vocab-grid"></div>
+      </section>
+
+      <section class="page" id="page-speaking">
+        <div class="page-heading"><p class="eyebrow">SPEAK OUT LOUD</p><h1>Speaking practice</h1><p>Jawab pertanyaan dengan suara. Gunakan contoh untuk membantu, bukan untuk dihafalkan.</p></div>
+        <div class="speaking-layout">
+          <article class="panel speaking-card"><div class="practice-top"><span class="tag">SPEAKING PROMPT</span><span id="prompt-count">01 / 12</span></div><div class="prompt-number" id="prompt-number">01</div><h2 id="prompt-question">What is your name?</h2><p class="prompt-translation" id="prompt-translation">Siapa namamu?</p><div class="sample-answer"><small>ANSWER IDEA</small><p id="prompt-example">My name is ...</p></div><div class="record-area"><button class="record-btn" id="record-btn"><span>●</span> Start speaking</button><button class="sound-btn" id="prompt-audio">▶ Listen</button></div><p class="record-hint" id="record-hint">Tekan tombol, izinkan akses mikrofon, lalu jawab dalam bahasa Inggris.</p><div class="transcript-box"><small>YOUR SPEECH TRANSCRIPT</small><p id="transcript">Your spoken words will appear here...</p></div><div class="prompt-actions"><button class="outline-btn" id="prev-prompt">← Previous</button><button class="primary-btn" id="next-prompt">Next question →</button></div></article>
+          <aside class="panel tips-card"><p class="eyebrow">SPEAKING TIPS</p><h3>Speak with confidence.</h3><ul><li>Speak slowly and clearly.</li><li>Use short, complete sentences.</li><li>Do not worry about small mistakes.</li><li>Try to answer in 2–4 sentences.</li></ul><div class="mini-note"><b>Remember</b><p>Browser speech recognition may not work in every browser. Use Chrome with microphone permission for the best experience.</p></div></aside>
+        </div>
+      </section>
+
+      <section class="page" id="page-ai">
+        <div class="page-heading"><p class="eyebrow">YOUR PERSONAL ENGLISH PARTNER</p><h1>AI conversation</h1><p>Berlatih percakapan bahasa Inggris dengan tutor yang sabar dan menyesuaikan level A1.</p></div>
+        <div class="chat-layout panel">
+          <div class="chat-header"><div class="ai-avatar">✳</div><div><b>English Buddy</b><small><span class="online-dot"></span> A1 tutor · Friendly practice</small></div><button class="clear-chat" id="clear-chat">New conversation ↻</button></div>
+          <div class="chat-suggestions"><button data-scenario="Let's practice introducing ourselves.">Introduce yourself</button><button data-scenario="Let's talk about my daily routine.">Daily routine</button><button data-scenario="Let's practice ordering food at a cafe.">At a café</button><button data-scenario="Let's talk about my family.">My family</button></div>
+          <div class="chat-messages" id="chat-messages"><div class="message bot"><span class="message-avatar">✳</span><div class="bubble"><small>ENGLISH BUDDY</small><p>Hello! I'm your English Buddy. Let's practice English together. What is your name?</p><button class="speak-message">▶ Listen</button></div></div></div>
+          <div class="chat-compose"><textarea id="chat-input" rows="1" placeholder="Write your answer in English..."></textarea><button id="chat-send" class="send-btn" aria-label="Send message">↑</button></div>
+          <div class="chat-footer"><span>AI tutor responds in simple A1 English and gently corrects mistakes.</span><button id="voice-chat" class="voice-chat">● Speak instead</button></div>
+        </div>
+        <p class="api-note" id="api-note">AI setup: connect the included Netlify Function and add your API key to enable live AI replies. Without setup, the built-in practice mode still works.</p>
+      </section>
+
+      <section class="page" id="page-quiz">
+        <div class="page-heading"><p class="eyebrow">CHECK YOUR UNDERSTANDING</p><h1>Quick quiz</h1><p>Uji pemahaman grammar dan vocabulary A1.</p></div>
+        <div class="panel quiz-panel" id="quiz-panel"><div class="quiz-top"><span class="tag">A1 CHECKPOINT</span><span id="quiz-progress">QUESTION 1 OF 10</span></div><div class="quiz-progress"><i id="quiz-progress-bar"></i></div><h2 id="quiz-question"></h2><div id="quiz-options" class="quiz-options"></div><div id="quiz-feedback" class="quiz-feedback"></div><button class="primary-btn" id="quiz-next" disabled>Check answer</button></div>
+      </section>
+
+      <footer class="site-footer"><span>ENGLISH PATH · A1 BEGINNER</span><span>Learn at your own pace.</span></footer>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
